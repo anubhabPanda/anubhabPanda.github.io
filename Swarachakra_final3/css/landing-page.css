@@ -20,7 +20,9 @@ h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
-
+svg{
+    shape-rendering:crispEdges ;
+}
 .topnav {
     font-size: 14px; 
 }
