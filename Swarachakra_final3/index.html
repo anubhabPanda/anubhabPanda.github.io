@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Swarachakra Visualization</title>
+
+    <!-- UI Range Slider -->
+    <link rel="stylesheet" href= "/noUiSlider.8.5.1/nouislider.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="http://idid.in/">Swarachakra</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#Visualizations">Visualizations</a>
+                    </li>
+                    <li>
+                        <a href="#Credits">Credits</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Swarachakra Visualization</h1>
+                        <h3>Swarachakra is a free text input application developed by the IDID group at Industrial Design Center (IDC), Indian Institute of Technology Bombay for Indic scripts.<BR> Currently, Swarachakra supports 12 Indian scripts.</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="#Viz1" class="btn btn-default btn-lg"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="network-name">VIS 1</span></a>
+                            </li>
+                            <li>
+                                <a href="#Viz2" class="btn btn-default btn-lg"><i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="network-name">VIS 2</span></a>
+                            </li>
+                            <li>
+                                <a href="#Viz3" class="btn btn-default btn-lg"><i class="fa fa-map" aria-hidden="true"></i> <span class="network-name">VIS 3</span></a>
+                            </li>
+                            <li>
+                                <a href="#Viz4" class="btn btn-default btn-lg"><i class="fa fa-pie-chart" aria-hidden="true"></i> <span class="network-name">VIS 4</span></a>
+                            </li>
+                            <li>
+                                <a href="#Viz5" class="btn btn-default btn-lg"><i class="fa fa-circle-thin" aria-hidden="true"></i> <span class="network-name">VIS 5</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="Visualizations"></a>
+    <div class="content-section-a">
+        <a name="Viz1"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-xs-12" >
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Words & frequencies for Swarachakra Hindi Corpus: <br>Top 100 used words</h2>
+					<p >
+							This visualization shows the top 100 words used in Swarachakra Hindi text input keyboard.Hover over the bars to see the words
+						</p>
+                    <!--<p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>  -->
+                    <div id = "rightPanel">
+                        <div id = "circle_pos">
+                            <div class = "slider"></div>
+                        </div>
+                        <div id ="buttonContainer">
+                            <button id="sort">Sort Values</button>
+                            <div id = "colorButton">
+                                <button id="colorA">Color A</button>
+                                <button id="colorB">Color B</button>
+                                
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+				
+				
+                <div class="col-lg-7 col-lg-offset-1 col-sm-6 col-xs-12">
+                    <!-- <img class="img-responsive" src="img/ipad.png" alt=""> -->
+                    <div id = "leftPanel">
+                        
+                    </div>
+                    <div id = "first_tooltip"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+    <a name="Viz2"></a>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Monthly User<br>Installs</h2>
+                    <p class="lead">This visualization shows the User installs of the Swarachakra Hindi text input keyboard in each months of a year since its launch.</p>
+                </div>
+                <div class="col-lg-7  col-sm-pull-6  col-sm-6">
+                    <!-- <img class="img-responsive" src="img/dog.png" alt=""> -->
+                    <div id = "DUI" >
+                        <h3 id = "d2">Monthly user installs for the year 2013</h3>
+                        <div id="chartB"></div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+    <a name="Viz3"></a>
+    <div class="content-section-a">
+    
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Usage of Swarachakra <br>Hindi keyboards in the world</h2>
+                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-1 col-sm-6">
+                    <!-- <img class="img-responsive" src="img/phones.png" alt=""> -->
+                    <div class="Mapcontainer">
+                        
+                        <div id="chartC">
+                            <div id = "interactiveMapElements"  >
+                                <div id = "zoomContainer" >
+                                        <button id = "zoomIn"><img src = "images/zoom-in.png" ></button>
+                                        <button id = "zoomOut"><img src = "images/zoom-out.png"></button>
+                                </div>
+                                <div id="presetsContainer">
+                                    <p>Zoom to…</p>
+                                </div>
+                               <!--  <div class="btn-group">
+                                  <button type="button" class="btn btn-primary">2016</button>
+                                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    
+                                    <li><a id = "second" href = "#">2015</a></li>
+                                    <li><a id = "third" href = "#">2014</a></li>
+                                    <li><a id = "fourth" href = "#">2013</a></li>
+                                    
+                                  </ul>
+                                </div> -->
+                                <select id = "yearSelector">
+                                    <option value = "2016">2016</option>
+                                    <option value = "2015">2015</option>
+                                    <option value = "2014">2014</option>
+                                    <option value = "2013">2013</option4>
+                                </select>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    <div class = "clearing"></div>
+    <div class="content-section-b">
+    <a name="Viz4"></a>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading" >Total User Installs of <br>various Swarachakra keyboards</h2>
+                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
+                </div>
+                <div class="col-lg-7 col-sm-pull-6  col-sm-6">
+                    <!-- <img class="img-responsive" src="img/dog.png" alt=""> -->
+                    <div class = "pieChart">
+                        <!-- <h3 id = "pieTitle">Total User Installs of various Swarachakra keyboards</h3> -->
+                        <div id="piechart"  style="width: 100%;height: 500px; "></div>
+                    </div>  
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+
+    <div class="content-section-a">
+
+        <div class="container">
+        <a name="Viz5"></a>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Top 100 words used in <br>Swarachakra Hindi Keyboards</h2>
+                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-1 col-sm-6">
+                    <!-- <img class="img-responsive" src="img/phones.png" alt=""> -->
+                    <div id = "bubbleContainer">
+                        <!-- <h3 id = "bubbleTitle">Top 100 words used in Swarachakra Hindi Keyboards</h3> -->
+                        <button id = "stop" type="button" class="btn btn-primary" >  Stop Bubbling      </button>
+                        <button id = "start" type = "button" class="btn btn-primary">  Restart Bubbling   </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+	<a  name="Credits"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Credits and Contributions:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p>Content and Design       :Anubhab Panda and Mili Jain</p>
+                    <p>Programming              :Anubhab Panda</p>
+                    <p>Data Source              :Google Playstore</p>
+                    <p>Code template/components :<a href = "https://d3js.org/">D3.js</a>,<a href = "http://getbootstrap.com/">Bootstrap</a>,
+                    <a href = "http://refreshless.com/nouislider/">noUiSlider</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#Visualizations">Visualizations</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#Credits">Credits</a>
+                        </li>
+                    </ul>
+                    <!-- <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ 
+    
+    <script type="text/javascript" src="/noUiSlider.8.5.1/nouislider.js"></script>
+    
+    <script type="text/javascript" src="js/script1.js"></script>
+    <script type="text/javascript" src="js/scriptDUI.js"></script>
+    <script type="text/javascript" src="js/script2.js"></script>
+    <script type = "text/javascript" src  = "js/script3.js"></script>
+    <script type="text/javascript" src="js/scriptPie.js"></script>
+
+</body>
+
+</html>
