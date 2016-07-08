@@ -21,7 +21,7 @@ var w3,h3;
 
 			var color = d3.scale.category20b();
 
-			d3.json("data/bubbleData/DataB.json",function(data){
+			d3.json("anubhabPanda.github.io/Swarachakra_final3/data/bubbleData/dataB.json",function(data){
 
 
 				// var tempData = [{
