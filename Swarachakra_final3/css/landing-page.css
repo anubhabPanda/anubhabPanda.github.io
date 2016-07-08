@@ -414,7 +414,7 @@ p.copyright {
                     -webkit-padding-start: 8px;
                     -webkit-user-select: none;
                     width:14%;
-                    background-image: url(https://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+                    background-image: url(../img/caret.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
                     background-position: 98% center;
                     background-repeat: no-repeat;
                     border: 1px solid #008CBA;
