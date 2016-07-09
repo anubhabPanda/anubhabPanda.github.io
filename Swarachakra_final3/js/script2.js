@@ -416,7 +416,7 @@ function udateMap(dataA,jsonA,sel){
 															    	.html("User Installs for the year " 
 															    	+ newYear + " : " + d.properties.userInstalls)
 															  }
-															    
+															   console.log(newYear) ; 
 															    
 															  })
 
