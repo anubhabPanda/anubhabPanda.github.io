@@ -414,7 +414,7 @@ function udateMap(dataA,jsonA,sel){
 															  if(d.properties.userInstalls !== undefined){
 															  	d3.select("#p6")
 															    	.text("User Installs for the year " 
-															    	+ year + " : " + d.properties.userInstalls)
+															    	+ sel + " : " + d.properties.userInstalls)
 															  }
 															    
 															    
