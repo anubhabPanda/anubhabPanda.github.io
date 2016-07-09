@@ -355,7 +355,7 @@ var div1 = d3.select("#chartC").append("div")
 
 function udateMap(dataA,jsonA,sel){	
 					
-					var textYear = sel;		
+					var newYear = sel;		
 					for(var i = 0;i<dataA.length;i++){
 
 											var dataCountryCode = dataA[i].countryCode;
@@ -414,7 +414,7 @@ function udateMap(dataA,jsonA,sel){
 															  if(d.properties.userInstalls !== undefined){
 															  	d3.select("#p6")
 															    	.text("User Installs for the year " 
-															    	+ textYear + " : " + d.properties.userInstalls)
+															    	+ newYear + " : " + d.properties.userInstalls)
 															  }
 															    
 															    
