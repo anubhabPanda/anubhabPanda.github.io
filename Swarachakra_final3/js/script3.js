@@ -98,23 +98,14 @@ var w3,h3;
 
 						//tooltip
 
-						// var div2 = d3.select("#bubbleContainer").append("div")   
-						// 		  .attr("class", "tooltip3")               
-						// 		  .style("opacity", 0)
+						var div2 = d3.select("#bubbleContainer").append("div")   
+								  .attr("class", "tooltip3")               
+								  .style("opacity", 0)
 
-						// div2.append("p").attr("id","p7")
- 					// 	div2.append("p").attr("id","p8")
+						div2.append("p").attr("id","p7")
+ 						div2.append("p").attr("id","p8")
 
-						d3.selectAll(".bubbles").filter(function(d,i){
-																		if(!d.children)
-																			return true;
-																		else
-																			return false;
-												 })
-												.append("title")
-												.text(function(d){
-															return d.word + " " + "frequency = " + d.value;
-														});
+						
 
 						d3.selectAll(".node")
 						.append("circle").classed("bubbles2",true)
@@ -133,23 +124,28 @@ var w3,h3;
 								return d.r * 1.5 ;
 						});
 
+						d3.selectAll(".bubbles2")
+						.on("mouseover",function(d){
 
-						// d3.selectAll("circles").on("mouseover", function(d) {
-													    
-													    
-						// 							    div2.transition().duration(300)
-						// 							    .style("opacity", 1)
-													    
-						// 							    div2.style("left", (d3.event.pageX+20) + "px")
-						// 							    .style("top", (d3.event.pageY -30) + "px");
+							 div2.transition().duration(300)
+															    .style("opacity", 0.7)
+															   if(!d.children){
 
-						// 							    d3.select("#p7")
-						// 							    .text("Word")
-													  
-						// 							    d3.select("#p8")
-						// 							    	.text(d.value)
-													    
-						// 							  })
+															   		div2.style("left", (d3.event.pageX-460) + "px")
+																	    .style("top", (d3.event.pageY-4180 ) + "px");
+
+																	    d3.select("#p7")
+																	    .text("Word : " + d.word)
+																	  
+																	  	d3.select("#p8")
+																	    	.text("Frequency : " + d.value )
+
+															   } 
+															    
+															  
+
+						})
+						
 				// }
 
 
