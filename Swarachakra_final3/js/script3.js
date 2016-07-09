@@ -125,11 +125,16 @@ var w3,h3;
 						});
 
 						d3.selectAll(".bubbles2")
+						.filter(function(d){
+							if(!d.children)
+								return true ;
+							return false;
+						})
 						.on("mouseover",function(d){
 
 							 div2.transition().duration(300)
 															    .style("opacity", 0.7)
-															   if(!d.children){
+															   // if(!d.children){
 
 															   		div2.style("left", (d3.event.pageX-460) + "px")
 																	    .style("top", (d3.event.pageY-4180 ) + "px");
@@ -140,10 +145,15 @@ var w3,h3;
 																	  	d3.select("#p8")
 																	    	.text("Frequency : " + d.value )
 
-															   } 
+															   // } 
 															    
-															  
+						
+						})
 
+						.on("mouseout",function(){
+
+							div2.transition().duration(300)
+												.style("opacity", 0)
 						})
 						
 				// }
