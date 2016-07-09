@@ -384,7 +384,7 @@ function udateMap(dataA,jsonA,sel){
 
 									countries = countriesGroup.selectAll("path")
 																.data(jsonA.features)
-																.transition()
+															countries.transition()
 																.duration(2000)
 																.ease("ease-in")
 																.attr("d",path)
@@ -400,7 +400,7 @@ function udateMap(dataA,jsonA,sel){
 																})
 																.style("opacity",0.8) 
 
-								 .on("mouseover", function(d) {
+								countries.on("mouseover", function(d) {
 															    d3.select(this).transition().duration(300).style("opacity", 1);
 															    
 															    div1.transition().duration(300)
