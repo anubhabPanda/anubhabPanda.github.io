@@ -413,7 +413,7 @@ function udateMap(dataA,jsonA,sel){
 															    .text(d.properties.name)
 															  if(d.properties.userInstalls !== undefined){
 															  	d3.select("#p6")
-															    	.text("User Installs for the year " 
+															    	.html("User Installs for the year " 
 															    	+ newYear + " : " + d.properties.userInstalls)
 															  }
 															    
@@ -431,7 +431,7 @@ function udateMap(dataA,jsonA,sel){
 
 
 								 
-									console.log(sel);
+									
 
 }
 
@@ -445,7 +445,7 @@ function udateMap(dataA,jsonA,sel){
 							.on("change",function(){
 								
 								sel = d3.select("#yearSelector").node().value;
-								console.log(data,json)
+								
 								udateMap(data,json,sel) ;
 
 							})
