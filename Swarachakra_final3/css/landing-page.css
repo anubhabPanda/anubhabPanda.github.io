@@ -559,6 +559,21 @@ p.copyright {
                 background:#008CBA;
                 color:white;
             }
-
+  
+  .tooltip3{
+    position:absolute;
+    display:inline-block;
+    color:black;
+    opacity: 0;
+    z-index: 40px;
+    width:100px;
+    text-align:center;
+    padding: 2px;             
+    font-size: 10px;     
+    background: #FFFFE0;
+    border: 1px;      
+    border-radius: 8px;           
+    pointer-events: none; 
+}
 /* End of 5th visualisation style*/
 
